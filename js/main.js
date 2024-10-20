@@ -39,9 +39,9 @@ const createComments = () => {
     const comment = {};
     const idAvatar = getRandomInteger (1, 6);
     comment.id = id;
-    comment.avatar = 'img/avatar-${idAvatar()}.svg';
-    comment.message = '${messageArray[indexMessageArr()]}. ${massageArray[indexMessageArr()]}';
-    comment.name = '${nameArray[indexNameArr()]}';
+    comment.avatar = `img/avatar-${idAvatar()}.svg`;
+    comment.message = `${messageArray[indexMessageArr()]}. ${massageArray[indexMessageArr()]}`;
+    comment.name = `${nameArray[indexNameArr()]}`;
     id++;
     return comment;
   };
@@ -59,8 +59,8 @@ const createPhoto = () => {
   return () => {
     const photo = {};
     photo.id = id;
-    photo.url = 'photo/${id}.jpg';
-    photo.description = 'Фото №${id}';
+    photo.url = `photo/${id}.jpg`;
+    photo.description = `Фото №${id}`;
     photo.likes = numLikes();
     photo.comments = Array.from({length : numComments()}, createComments());
     id++;
