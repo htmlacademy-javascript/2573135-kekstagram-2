@@ -1,3 +1,4 @@
+/*
 const checkLendth = (string = '', maxSymbols = 1) => (string.length <= maxSymbols);
 
 const isPalindrome = (string) => {
@@ -10,3 +11,4 @@ const isPalindrome = (string) => {
 
   return string === reversedLine;
 }
+*/
