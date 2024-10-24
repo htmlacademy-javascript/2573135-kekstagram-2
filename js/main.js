@@ -3,6 +3,7 @@ const NAMES_SET = 'Александ, Светлана, Игорь, Екатер�
 
 const MIN_LIKES = 15;
 const MAX_LIKES = 200;
+const MIN_COMMENTS = 0;
 const MAX_COMMENTS = 30;
 const CREATED_PHOTO = 25;
 
@@ -39,9 +40,9 @@ const createComments = () => {
     const comment = {};
     const idAvatar = getRandomInteger (1, 6);
     comment.id = id;
-    comment.avatar = 'img/avatar-${idAvatar()}.svg';
-    comment.message = '${messageArray[indexMessageArr()]}. ${massageArray[indexMessageArr()]}';
-    comment.name = '${nameArray[indexNameArr()]}';
+    comment.avatar = `img/avatar-${idAvatar()}.svg`;
+    comment.message = `${messageArray[indexMessageArr()]}. ${massageArray[indexMessageArr()]}`;
+    comment.name = `${nameArray[indexNameArr()]}`;
     id++;
     return comment;
   };
@@ -49,7 +50,7 @@ const createComments = () => {
 };
 
 //Количество коментариев
-const numComments = getRandomInteger (0, MAX_COMMENTS);
+const numComments = getRandomInteger (MIN_COMMENTS, MAX_COMMENTS);
 //количество лайков
 numLikes = getRandomInteger (MIN_LIKES, MAX_LIKES);
 
@@ -59,8 +60,8 @@ const createPhoto = () => {
   return () => {
     const photo = {};
     photo.id = id;
-    photo.url = 'photo/${id}.jpg';
-    photo.description = 'Фото №${id}';
+    photo.url = `photo/${id}.jpg`;
+    photo.description = `Фото №${id}`;
     photo.likes = numLikes();
     photo.comments = Array.from({length : numComments()}, createComments());
     id++;
