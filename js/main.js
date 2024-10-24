@@ -1,5 +1,6 @@
 import {numLikes, getRandomInteger, createComments,numComments} from './util.js';
 import { CREATED_PHOTO } from './data.js';
+
 const createPhoto = () => {
   let id = 1;
 

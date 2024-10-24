@@ -28,7 +28,9 @@ export const createComments = () => {
   const indexNameArr = getRandomInteger (0, nameArray.length - 1);
 
   // Разобьем комментарии с разделителем - !
+
   messageArray.splice(0, 1, messageArray[0].split('! ')[0],messageArray[0].split('! ')[1]);
+
   return () => {
     const comment = {};
     const idAvatar = getRandomInteger (1, 6);
