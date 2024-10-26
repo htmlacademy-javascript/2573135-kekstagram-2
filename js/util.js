@@ -1,6 +1,6 @@
 //Функция получения случайного числа из заданного диапазона
 
-import { MIN_COMMENTS, MAX_COMMENTS, MIN_LIKES, MAX_LIKES, MESSAGE_SET, NAMES_SET} from './data';
+import { MIN_COMMENTS, MAX_COMMENTS, MIN_LIKES, MAX_LIKES, MESSAGE_SET, NAMES_SET} from './data.js';
 
 export const getRandomInteger = (a, b) => {
 
