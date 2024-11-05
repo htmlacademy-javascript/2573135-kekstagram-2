@@ -1,6 +1,6 @@
 //Функция получения случайного числа из заданного диапазона
 
-import { MIN_COMMENTS, MAX_COMMENTS, MIN_LIKES, MAX_LIKES, MESSAGE_SET, NAMES_SET} from './data';
+import { MIN_COMMENTS, MAX_COMMENTS, MIN_LIKES, MAX_LIKES, MESSAGE_SET, NAMES_SET, MIN_AVATAR, MAX_AVATAR} from './data';
 
 export const getRandomInteger = (a, b) => {
 
@@ -33,7 +33,7 @@ export const createComments = () => {
 
   return () => {
     const comment = {};
-    const idAvatar = getRandomInteger (1, 6);
+    const idAvatar = getRandomInteger (MIN_AVATAR, MAX_AVATAR);
     comment.id = id;
     comment.avatar = `img/avatar-${idAvatar()}.svg`;
     comment.message = `${messageArray[indexMessageArr()]}. ${messageArray[indexMessageArr()]}`;

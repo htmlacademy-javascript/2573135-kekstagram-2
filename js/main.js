@@ -1,5 +1,6 @@
 import {numLikes, getRandomInteger, createComments,numComments} from './util.js';
 import { CREATED_PHOTO } from './data.js';
+import './thumbnails.js';
 
 const createPhoto = () => {
   let id = 1;
@@ -20,3 +21,4 @@ const createPhoto = () => {
 
 const photoArray = Array.from ({length: CREATED_PHOTO}, createPhoto());
 console.log(photoArray);
+
