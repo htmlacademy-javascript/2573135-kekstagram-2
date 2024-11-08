@@ -6,3 +6,5 @@ export const MAX_LIKES = 200;
 export const MIN_COMMENTS = 0;
 export const MAX_COMMENTS = 30;
 export const CREATED_PHOTO = 25;
+export const MIN_AVATAR = 1;
+export const MAX_AVATAR = 6;
